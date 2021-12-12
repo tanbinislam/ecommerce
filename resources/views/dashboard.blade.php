@@ -1,17 +1,83 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+    <x-dash.page-title>Dashboard</x-dash.page-title>
+    <div class="row">
+        <div class="col-lg-3">
+            <x-dash.infocard title="Customers" percent="10.33">
+                35,004
+            </x-dash.infocard>
+        </div> <!-- end col-->
+        <div class="col-lg-3">
+            <x-dash.infocard title="Customers" percent="10.33">
+                35,004
+            </x-dash.infocard>
+        </div> <!-- end col-->
+        <div class="col-lg-3">
+            <x-dash.infocard title="Customers" percent="10.33">
+                35,004
+            </x-dash.infocard>
+        </div> <!-- end col-->
+        <div class="col-lg-3">
+            <x-dash.infocard title="Customers" percent="10.33" icon="mdi mdi-currency-usd widget-icon bg-success-lighten text-success">
+                35,004
+            </x-dash.infocard>
+        </div> <!-- end col-->
+    </div><!-- end row -->
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="dropdown float-end">
+                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="mdi mdi-dots-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                        </div>
+                    </div>
+                    <h4 class="header-title mb-3">Revenue</h4>
+
+                    <div class="chart-content-bg">
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <p class="text-muted mb-0 mt-3">Current Week</p>
+                                <h2 class="fw-normal mb-3">
+                                    <small class="mdi mdi-checkbox-blank-circle text-primary align-middle me-1"></small>
+                                    <span>$58,254</span>
+                                </h2>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-muted mb-0 mt-3">Previous Week</p>
+                                <h2 class="fw-normal mb-3">
+                                    <small class="mdi mdi-checkbox-blank-circle text-success align-middle me-1"></small>
+                                    <span>$69,524</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-item-overlay d-none d-md-block" dir="ltr">
+                        <h5>Today's Earning: $2,562.30</h5>
+                        <p class="text-muted font-13 mb-3 mt-2">Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                            Etiam rhoncus...</p>
+                        <a href="javascript: void(0);" class="btn btn-outline-primary">View Statements
+                            <i class="mdi mdi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <div dir="ltr">
+                        <div id="revenue-chart" class="apex-charts mt-3" data-colors="#536de6,#10c469"></div>
+                    </div>
+                    
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col-->
+    </div><!-- end row -->
 </x-app-layout>
