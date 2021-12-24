@@ -1,0 +1,17 @@
+.req_star{
+    color: #ff0000;
+}
+
+.sa-btn-cancle{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.sa-btn-cancle:hover{
+    color: #fff;
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+.sa-btn-cancle:not([disabled]):hover {
+    background-color: #bb2d3b;
+}
