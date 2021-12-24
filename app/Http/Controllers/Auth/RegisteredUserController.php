@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Str;
 
 class RegisteredUserController extends Controller
 {
@@ -43,7 +45,11 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'user_name' => 'UN'.Str::random(9),
         ]);
+
+        $role = Role::findOrCreate('Customer');
+        $user->assignRole($role);
 
         event(new Registered($user));
 
