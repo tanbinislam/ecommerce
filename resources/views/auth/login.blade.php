@@ -50,6 +50,9 @@
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>
+                <a href="{{ route('socialRedirect', ['provider' => 'github']) }}">Github</a>
+                <a href="{{ route('socialRedirect', ['provider' => 'facebook']) }}">Facebook</a>
+                <a href="{{ route('socialRedirect', ['provider' => 'google']) }}">Google</a>
             </div>
         </form>
     </x-auth-card>
