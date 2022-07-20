@@ -28,6 +28,6 @@ class UserSeeder extends Seeder
         $role2 = Role::findOrCreate('Customer');
         $admin->assignRole($role, $role2);
 
-        \App\Models\User::factory(300)->create();
+        \App\Models\User::factory(50)->create();
     }
 }

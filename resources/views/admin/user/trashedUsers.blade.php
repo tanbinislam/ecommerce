@@ -73,8 +73,8 @@
                                     </td>
 
                                     <td>
-                                        <a href="#" data-url="{{route('restoreUser', ['id' => $user->id])}}" class="action-icon restore-user" title="Restore"> <i class="mdi mdi-restore"></i></a>
-                                        <a href="#" data-url="{{route('permanentDeleteUser', ['id' => $user->id])}}" class="action-icon permanent-delete-user" title="Permanent Delete"> <i class="mdi mdi-delete"></i></a>
+                                        <a data-name="User" data-title="{{$user->name}}" href="#" data-url="{{route('restoreUser', ['id' => $user->id])}}" class="dtbl-icon action-icon restore-dta" title="Restore"> <i class="mdi mdi-restore"></i></a>
+                                        <a data-name="User" data-title="{{$user->name}}" href="#" data-url="{{route('permanentDeleteUser', ['id' => $user->id])}}" class="dtbl-icon action-icon permanent-delete-dta" title="Permanent Delete"> <i class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

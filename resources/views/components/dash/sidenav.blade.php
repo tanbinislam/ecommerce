@@ -35,19 +35,28 @@
 
         <x-dash.sidenav-title title="-- PRODUCT --">
 
-            <x-dash.sidenav-dropdown icon=" uil-bill">
+            <x-dash.sidenav-dropdown icon=" uil-store-alt">
                 Products
                 <x-slot name="dropdownItems">
-                    <x-dash.dropdown-item icon="uil-money-stack">All Products</x-dash.dropdown-item>
-                    <x-dash.dropdown-item icon="uil-moneybag-alt">Add Product</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="allProducts" icon="uil-layer-group">All Products</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="createProduct" icon="uil-plus-square">Add Product</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="draftedProducts" icon="uil-edit-alt">Drafted Products</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="trashedProducts" icon="uil-trash-alt">Trashed Products</x-dash.dropdown-item>
+                    <x-dash.dropdown-item icon="">-- Categories --</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="allProductCategories" icon="uil-list-ul">All Product Categories</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="createProductCategory" icon="uil-plus-square">Add Product Category</x-dash.dropdown-item>
+                    <x-dash.dropdown-item icon="">-- Tags --</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="allProductTags" icon="uil-list-ul">All Product Tags</x-dash.dropdown-item>
+                    <x-dash.dropdown-item route="createProductTag" icon="uil-plus-square">Add Product Tag</x-dash.dropdown-item>
                 </x-slot>
             </x-dash.sidenav-dropdown>
 
-            <x-dash.sidenav-dropdown icon="uil-books">
+            <x-dash.sidenav-dropdown icon="uil-cart">
                 Orders
                 <x-slot name="dropdownItems">
-                    <x-dash.dropdown-item icon="uil-copy">All Orders</x-dash.dropdown-item>
-                    <x-dash.dropdown-item icon="uil-file-plus-alt">Add Orders</x-dash.dropdown-item>
+                    <x-dash.dropdown-item icon="uil-list-ul">All Orders</x-dash.dropdown-item>
+                    <x-dash.dropdown-item icon="uil-plus-square">Pending Orders</x-dash.dropdown-item>
+                    <x-dash.dropdown-item icon="uil-plus-square">Completed Orders</x-dash.dropdown-item>
                 </x-slot>
             </x-dash.sidenav-dropdown>
 

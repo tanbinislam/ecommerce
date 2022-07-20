@@ -73,8 +73,8 @@
                                     </td>
 
                                     <td>
-                                        <a href="{{route('editUser', ['user' => $user])}}" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="#" class="action-icon del-user" data-url="{{route('deleteUser', ['user' => $user])}}"> <i class="mdi mdi-delete"></i></a>
+                                        <a data-name="User" data-title="{{$user->name}}" href="{{route('editUser', ['user' => $user])}}" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                        <a data-name="User" data-title="{{$user->name}}" href="#" class="dtbl-icon action-icon del-dta" data-url="{{route('deleteUser', ['user' => $user])}}"> <i class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

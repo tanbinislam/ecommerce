@@ -24,7 +24,7 @@ class AdminController extends Controller
     // view all customers
     public function users()
     {
-        $users = User::orderBy('id', 'DESC')->get();
+        $users = User::orderBy('id', 'DESC')->with('roles')->get();
         return view('admin.user.all', compact('users'));
     }
 
